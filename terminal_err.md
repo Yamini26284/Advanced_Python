@@ -85,3 +85,34 @@ The sep parameter in the built-in print() function defines the separator between
 *Default behavior*: By default, print() separates values with a single space (" ").
 
 *Custom separators*: You can specify any string as a separator
+
+### Type Casting
+Type Casting is essentially the process of converting one data type into another 
+
+**Implicit Type Casting** : Implicit casting happens automatically. The Python interpreter is smart enough to convert a "lower" data type (like an integer) to a "higher" data type (like a float) to prevent data loss.
+
+How it works: Python does the work for you.
+
+Why it happens: To make sure you don't lose the decimal precision in a calculation.
+    num_int = 10    # Integer
+    num_float = 1.5 # Float
+
+    # Python automatically converts num_int to a float before adding
+    result = num_int + num_float 
+
+    print(result)       # Output: 11.5
+    print(type(result)) # Output: <class 'float'>
+**Explicit Type Casting**  : Explicit casting (also called Type Conversion) is when you tell the computer exactly what type you want a value to be. You use built-in functions like int(), float(), or str().
+
+How it works: You wrap the variable in a constructor function.
+
+Why it happens: Because sometimes Python won't "guess" correctly, or you're dealing with external data (like a user input or an API response) that comes in as the wrong type.
+    price_str = "199"  # This is a String (text)
+    tax = 0.18
+
+    # result = price_str * tax  <-- This would throw an ERROR! 
+
+    # Explicitly converting string to integer to perform math
+    total_price = int(price_str) * (1 + tax)
+
+    print(total_price) # Output: 234.82
