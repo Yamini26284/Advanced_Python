@@ -116,3 +116,38 @@ Why it happens: Because sometimes Python won't "guess" correctly, or you're deal
     total_price = int(price_str) * (1 + tax)
 
     print(total_price) # Output: 234.82
+
+### len()
+The len() function is actually one of the most versatile tools in Python. It isn't limited to just strings or arrays; it can be used with almost any data type that holds a collection of items.
+
+In Python, we call these "Sized" objects. Think of len() as a tape measure: if you can count the "pieces" inside a container, len() can measure it.
+
+**1. Where can you use it?**
+Beyond strings, you will use len() constantly with these common data types:
+
+    Lists (Arrays): To count how many items are in a list.
+
+    len([10, 20, 30]) → 3
+
+    Dictionaries: To count how many "Key-Value" pairs exist.
+
+    len({"name": "Priya", "age": 22}) → 2
+
+    Tuples: Similar to lists, but they can't be changed.
+
+    len((1, 2)) → 2
+
+    Sets: To count unique items.
+
+    len({1, 2, 2, 3}) → 3 (because sets remove duplicates!)
+
+**2. What are the limits? (Where it fails)**
+You cannot use len() on data types that represent a single, solid value rather than a collection.
+
+    Integers/Floats: You can't ask "how long is the number 100?" Python will give you a TypeError.
+
+    len(100) → Error (If you want to count digits, you'd have to turn it into a string first!)
+
+    Booleans: You can't measure True or False.
+
+    len(True) → Error
