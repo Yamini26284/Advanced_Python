@@ -151,3 +151,48 @@ You cannot use len() on data types that represent a single, solid value rather t
     Booleans: You can't measure True or False.
 
     len(True) → Error
+
+### String methods
+1. count(): The .center() method is a straightforward formatting tool that helps you position a string in the middle of a specific amount of space
+How it works
+The method takes two arguments:
+
+    width (Required): The total length of the resulting string.
+
+    fillchar (Optional): The character used to fill the empty space around your text. It defaults to an empty space (" ").
+
+Basic Example: Default Alignment
+If you want to center a title in a 20-character wide block:
+
+    Python
+    x = "Priya"
+    print(x.center(20))
+    What happens inside the flow:
+
+Python calculates the length of "Priya" (5).
+
+It subtracts 5 from 20, leaving 15 empty spaces.
+
+It splits those 15 spaces: 7 on the left and 8 on the right (Python gives the extra space to the right if the number is odd).
+
+Advanced Example: Using a fillchar
+In a professional backend log, you might want to highlight a new process or a verification step for CrossLens. You can use a character like * or - to make it stand out.
+
+    Python
+    status = "VERIFYING"
+    print(status.center(30, "-"))
+    Output:
+    ----------VERIFYING-----------
+
+The flow:
+
+The total width is exactly 30.
+
+The string "VERIFYING" (9 characters) sits in the middle.
+
+The remaining 21 spots are filled with dashes.
+
+Key Rules to Remember
+One Character Only: The fillchar must be exactly one character. If you try to use "--", Python will throw a TypeError.
+
+Width > Length: If the width you provide is smaller than the string itself (e.g., "Priya".center(3)), Python won't cut your string. It will simply return the original string "Priya" untouched.
